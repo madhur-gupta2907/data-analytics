@@ -555,62 +555,29 @@ elif view == "ML Predictions":
 elif view == "System Design":
     st.subheader("🏗️ System Architecture")
     st.markdown("""
-    📁 Data Source
-    ├── CSV Upload (User)
-    └── Local File (superstore.csv)
-    │
-    ▼
-    🧹 Data Processing Layer
-    ├── Remove duplicates
-    ├── Handle missing values
-    ├── Detect date column
-    ├── Convert to datetime
-    ├── Feature engineering:
-    │ ├── YearMonth
-    │ ├── Year
-    │ ├── Month
-    │ └── Ordinal_Date
-    │
-    ▼
-🎛️ Control Panel (Sidebar)
-├── Select Value Column
-├── Select Profit Column
-├── Select Group Column
-├── Theme Toggle (Dark/Light)
-└── Module Navigation
-│
-▼
-📊 Analytics Modules
-├── Overview Dashboard
-│ ├── KPI Cards
-│ ├── Pie / Sunburst
-│ ├── Top 10 Table
-├── Sales Trends
-│ ├── Monthly Trend
-│ ├── Year-over-Year
-│ ├── Seasonality
-├── EDA Module
-│ ├── Correlation Heatmap
-│ ├── Histogram
-│ ├── Scatter Plot
-└── ML Predictions
-├── Train/Test Split
-├── Linear Regression
-├── Forecast (Next 6 Months)
-├── Residual Analysis
-│
-▼
-📈 Visualization Layer
-├── Plotly Charts
-├── Interactive Graphs
-└── Dynamic Dashboard
-│
-▼
-👤 User Output
-├── Insights
-├── Forecast Data
-└── Download Cleaned CSV
-""")
+
+Architecture Flow
+
+CSV Upload / Local File
+      │
+      ▼
+load_and_clean_data()
+├─ Strip column whitespace
+├─ Drop duplicates
+├─ Auto-detect date column (12+ candidate names + sniff fallback)
+├─ Parse dates → YearMonth, Year, Month, Ordinal_Date
+└─ Auto-derive Sales = Qty × Price (if Sales column absent)
+      │
+      ▼
+Sidebar Column Mapper
+(auto-selects Value / Profit / Group columns, user can override)
+      │
+      ├──▶ Overview        → KPIs + Data Quality + Sunburst/Pie + Box/Bar + Top-10
+      ├──▶ Sales Trends    → Monthly Line + YoY Bar + Seasonality + Group Breakdown
+      ├──▶ Correlation EDA → Heatmap + Histogram + Scatter + Descriptive Stats
+      └──▶ ML Predictions  → Train/Test Forecast + Residual Chart + Forecast Table
+
+    """)
 
 
 # ─────────────────────────────────────────────────────────────────
