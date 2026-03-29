@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import streamlit as st
 import numpy as np
 from datetime import datetime
+import statsmodels.api as sm
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_absolute_error
 
