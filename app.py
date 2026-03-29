@@ -556,63 +556,60 @@ elif view == "System Design":
     st.subheader("🏗️ System Architecture")
     st.markdown("""
     📁 Data Source
-   ├── CSV Upload (User)
-   └── Local File (superstore.csv)
-          │
-          ▼
-🧹 Data Processing Layer
-   ├── Remove duplicates
-   ├── Handle missing values
-   ├── Detect date column
-   ├── Convert to datetime
-   ├── Feature engineering:
-   │     ├── YearMonth
-   │     ├── Year
-   │     ├── Month
-   │     └── Ordinal_Date
-          │
-          ▼
+    ├── CSV Upload (User)
+    └── Local File (superstore.csv)
+    │
+    ▼
+    🧹 Data Processing Layer
+    ├── Remove duplicates
+    ├── Handle missing values
+    ├── Detect date column
+    ├── Convert to datetime
+    ├── Feature engineering:
+    │ ├── YearMonth
+    │ ├── Year
+    │ ├── Month
+    │ └── Ordinal_Date
+    │
+    ▼
 🎛️ Control Panel (Sidebar)
-   ├── Select Value Column
-   ├── Select Profit Column
-   ├── Select Group Column
-   ├── Theme Toggle (Dark/Light)
-   └── Module Navigation
-          │
-          ▼
+├── Select Value Column
+├── Select Profit Column
+├── Select Group Column
+├── Theme Toggle (Dark/Light)
+└── Module Navigation
+│
+▼
 📊 Analytics Modules
-   ├── Overview Dashboard
-   │     ├── KPI Cards
-   │     ├── Pie / Sunburst
-   │     ├── Top 10 Table
-   │
-   ├── Sales Trends
-   │     ├── Monthly Trend
-   │     ├── Year-over-Year
-   │     ├── Seasonality
-   │
-   ├── EDA Module
-   │     ├── Correlation Heatmap
-   │     ├── Histogram
-   │     ├── Scatter Plot
-   │
-   └── ML Predictions
-         ├── Train/Test Split
-         ├── Linear Regression
-         ├── Forecast (Next 6 Months)
-         ├── Residual Analysis
-          │
-          ▼
+├── Overview Dashboard
+│ ├── KPI Cards
+│ ├── Pie / Sunburst
+│ ├── Top 10 Table
+├── Sales Trends
+│ ├── Monthly Trend
+│ ├── Year-over-Year
+│ ├── Seasonality
+├── EDA Module
+│ ├── Correlation Heatmap
+│ ├── Histogram
+│ ├── Scatter Plot
+└── ML Predictions
+├── Train/Test Split
+├── Linear Regression
+├── Forecast (Next 6 Months)
+├── Residual Analysis
+│
+▼
 📈 Visualization Layer
-   ├── Plotly Charts
-   ├── Interactive Graphs
-   └── Dynamic Dashboard
-          │
-          ▼
+├── Plotly Charts
+├── Interactive Graphs
+└── Dynamic Dashboard
+│
+▼
 👤 User Output
-   ├── Insights
-   ├── Forecast Data
-   └── Download Cleaned CSV
+├── Insights
+├── Forecast Data
+└── Download Cleaned CSV
 """)
 
 
