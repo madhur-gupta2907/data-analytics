@@ -1,15 +1,6 @@
-# Web Framework
 streamlit
-
-# Data Manipulation
 pandas
 numpy
-
-# Visualization
 plotly
-
-# Machine Learning (Member 4 Requirements)
 scikit-learn
-
-# Date Handling
-python-dateutil
+statsmodels
